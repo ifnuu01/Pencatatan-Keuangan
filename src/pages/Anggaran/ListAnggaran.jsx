@@ -44,7 +44,7 @@ function ListAnggaran() {
                       <h2 className="font-bold">{item.name}</h2>
                       <div className="flex items-center gap-2">
                         <span>Tersisa : </span>
-                        <span>{item.remaining}</span>
+                        <span>Rp {item.remaining.toLocaleString()}</span>
                       </div>
                     </div>
                     <ProgressBar
