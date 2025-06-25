@@ -60,7 +60,7 @@ function Welcome() {
         </div>
       </main>
 
-      <footer className="w-full flex flex-col items-center gap-2 pb-8 z-10 relative mt-4">
+      <footer className="w-full flex flex-col items-center gap-2 pb-8 z-10 relative mt-4 lg:mt-0">
         <Link
           to="https://github.com/ifnuu01"
           target="_blank"
