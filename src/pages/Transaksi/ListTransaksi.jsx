@@ -82,6 +82,7 @@ function ListTransaksi() {
                 </div>
               ) : (
                 <div className="flex flex-col gap-2">
+                  <h1 className="text-gray-800">Riwayat Transaksi</h1>
                   {getAll.data.data.map((transaksi) => (
                     <TransaksiCard key={transaksi.id} transaksi={transaksi} />
                   ))}
