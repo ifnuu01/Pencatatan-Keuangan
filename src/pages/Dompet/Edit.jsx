@@ -11,7 +11,6 @@ function Edit() {
   const [inputs, setInputs] = useState({
     name: "",
     balance: "",
-    currency: "",
   });
 
   useEffect(() => {
@@ -65,15 +64,6 @@ function Edit() {
                 value={inputs.balance}
                 onChange={handleChange}
                 placeholder="Masukan jumlah uang"
-              />
-              <InputField
-                label="Mata Uang"
-                icon={"mdi:currency-usd"}
-                type="text"
-                name="currency"
-                value={inputs.currency}
-                onChange={handleChange}
-                placeholder="Masukan mata uang"
               />
               <div className="flex items-center gap-4">
                 <button

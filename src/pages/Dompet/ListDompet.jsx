@@ -41,7 +41,7 @@ function ListDompet() {
                   <div className="flex flex-col">
                     <span className=" text-xs">{wallet.name}</span>
                     <span className=" text-lg font-bold">
-                      {wallet.balance.toLocaleString()} {wallet.currency}
+                      Rp {wallet.balance.toLocaleString()}
                     </span>
                   </div>
                   <Icon icon="mdi:wallet" className=" text-4xl" />

@@ -11,7 +11,6 @@ function Create() {
   const [inputs, setInputs] = useState({
     name: "",
     balance: "",
-    currency: "",
   });
 
   const handleChange = (e) => {
@@ -50,16 +49,6 @@ function Create() {
               onChange={handleChange}
               error={create.isError && create.errors?.balance}
               placeholder="Masukan jumlah uang"
-            />
-            <InputField
-              label="Mata Uang"
-              icon={"mdi:currency-usd"}
-              type="text"
-              name="currency"
-              value={inputs.currency}
-              onChange={handleChange}
-              error={create.isError && create.errors?.currency}
-              placeholder="Masukan mata uang"
             />
             <div className="flex items-center gap-4">
               <button
