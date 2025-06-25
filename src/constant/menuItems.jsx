@@ -4,6 +4,7 @@ const menuItems = [
   { label: "Kategori", icon: "mdi:format-list-bulleted", path: "/kategori" },
   { label: "Anggaran", icon: "mdi:calculator", path: "/anggaran" },
   { label: "Dompet", icon: "mdi:wallet", path: "/dompet" },
+  { label: "Grafik", icon: "mdi:chart-bar", path: "/grafik" },
 ];
 
 export default menuItems;
