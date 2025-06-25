@@ -39,7 +39,7 @@ function Header() {
               <Icon icon="mdi:menu" className="text-2xl" />
             </button>
             <div className="flex items-center">
-              <div className="bg-black rounded-full h-10 w-10 flex items-center justify-center animate-bounce">
+              <div className="bg-black rounded-full h-10 w-10 flex items-center justify-center">
                 <Icon
                   icon="mingcute:pig-money-fill"
                   className="text-white text-2xl"
