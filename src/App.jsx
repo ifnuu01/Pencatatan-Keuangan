@@ -17,6 +17,7 @@ import TransaksiEdit from "./pages/Transaksi/Edit.jsx";
 import Anggaran from "./pages/Anggaran/ListAnggaran.jsx";
 import AnggaranCreate from "./pages/Anggaran/Create.jsx";
 import AnggaranEdit from "./pages/Anggaran/Edit.jsx";
+import Grafik from "./pages/Charts.jsx";
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
         <Route path="/anggaran" element={<Anggaran />} />
         <Route path="/anggaran/create" element={<AnggaranCreate />} />
         <Route path="/anggaran/edit/:id" element={<AnggaranEdit />} />
+        <Route path="/grafik" element={<Grafik />} />
       </Route>
     </Routes>
   );
