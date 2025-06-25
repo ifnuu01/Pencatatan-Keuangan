@@ -117,7 +117,7 @@ function Create() {
               >
                 Simpan
               </button>
-              <Link to="/kategori">
+              <Link to="/dompet">
                 <button className="border border-black mt-4 text-black px-4 py-2 rounded-lg hover:rounded-none cursor-pointer transition-all duration-300 flex gap-1 items-center w-fit">
                   Kembali
                 </button>

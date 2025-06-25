@@ -145,7 +145,7 @@ function Edit() {
                 Hapus
               </button>
               <Link
-                to="/anggaran"
+                to="/dompet"
                 className="border border-black text-black px-4 py-2 rounded-lg hover:rounded-none cursor-pointer transition-all duration-300"
               >
                 Batal

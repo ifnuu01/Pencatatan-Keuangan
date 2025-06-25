@@ -14,7 +14,6 @@ import KategoriEdit from "./pages/Kategori/Edit.jsx";
 import Transaksi from "./pages/Transaksi/ListTransaksi.jsx";
 import TransaksiCreate from "./pages/Transaksi/Create.jsx";
 import TransaksiEdit from "./pages/Transaksi/Edit.jsx";
-import Anggaran from "./pages/Anggaran/ListAnggaran.jsx";
 import AnggaranCreate from "./pages/Anggaran/Create.jsx";
 import AnggaranEdit from "./pages/Anggaran/Edit.jsx";
 import Grafik from "./pages/Charts.jsx";
@@ -50,9 +49,9 @@ function App() {
         <Route path="/transaksi" element={<Transaksi />} />
         <Route path="/transaksi/create" element={<TransaksiCreate />} />
         <Route path="/transaksi/edit/:id" element={<TransaksiEdit />} />
-        <Route path="/anggaran" element={<Anggaran />} />
-        <Route path="/anggaran/create" element={<AnggaranCreate />} />
-        <Route path="/anggaran/edit/:id" element={<AnggaranEdit />} />
+        {/* <Route path="/dompet/anggaran" element={<Anggaran />} /> */}
+        <Route path="/dompet/anggaran/create" element={<AnggaranCreate />} />
+        <Route path="/dompet/anggaran/edit/:id" element={<AnggaranEdit />} />
         <Route path="/grafik" element={<Grafik />} />
       </Route>
     </Routes>
