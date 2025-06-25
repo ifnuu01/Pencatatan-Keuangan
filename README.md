@@ -17,7 +17,10 @@ I-Catat adalah aplikasi pencatatan keuangan berbasis web yang memudahkan penggun
 ## Teknologi
 
 - **React** + **Vite** untuk pengembangan frontend.
-- **Chart.js** atau library sejenis untuk visualisasi data.
+- **Recharts** atau library sejenis untuk visualisasi data.
+- **Axios** untuk komunikasi HTTP.
+- **TanStack Query** untuk manajemen state dan pengambilan data.
+- **Tailwind CSS** untuk styling.
 - **Responsive Design** untuk tampilan optimal di berbagai perangkat.
 
 ## Cara Menjalankan
