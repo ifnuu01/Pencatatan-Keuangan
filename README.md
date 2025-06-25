@@ -31,7 +31,7 @@ I-Catat adalah aplikasi pencatatan keuangan berbasis web yang memudahkan penggun
    ```
 2. Masuk ke folder project:
    ```bash
-   cd fe-pencatatan-keuangan
+   cd Pencatatan-Keuangan
    ```
 3. Install dependencies:
    ```bash
