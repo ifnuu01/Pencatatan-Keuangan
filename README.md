@@ -1,12 +1,49 @@
-# React + Vite
+# I-Catat
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I-Catat adalah aplikasi pencatatan keuangan berbasis web yang memudahkan pengguna untuk mencatat pemasukan, pengeluaran, serta memantau grafik keuangan secara real-time. Aplikasi ini dirancang responsif dan dapat diakses melalui desktop maupun perangkat mobile.
 
-Currently, two official plugins are available:
+## Fitur Utama
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Dashboard**: Ringkasan pemasukan, pengeluaran, dan saldo akhir.
+- **Transaksi**: Catat pemasukan dan pengeluaran dengan mudah.
+- **Kategori**: Kelola kategori transaksi sesuai kebutuhan.
+- **Grafik**: Visualisasi data keuangan dalam bentuk grafik dan diagram.
+- **Dompet**: Manajemen saldo dan dompet.
 
-## Expanding the ESLint configuration
+## Tampilan Aplikasi
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<img src="./Web.png" alt="Gambar Web">
+
+## Teknologi
+
+- **React** + **Vite** untuk pengembangan frontend.
+- **Chart.js** atau library sejenis untuk visualisasi data.
+- **Responsive Design** untuk tampilan optimal di berbagai perangkat.
+
+## Cara Menjalankan
+
+1. Clone repository ini:
+   ```bash
+   git clone https://github.com/username/fe-pencatatan-keuangan.git
+   ```
+2. Masuk ke folder project:
+   ```bash
+   cd fe-pencatatan-keuangan
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Jalankan aplikasi:
+   ```bash
+   npm run dev
+   ```
+5. Buka di browser pada `http://localhost:5173`
+
+## Kontribusi
+
+Kontribusi sangat terbuka! Silakan buat issue atau pull request untuk perbaikan dan penambahan fitur.
+
+---
+
+&copy; 2025 I-Catat
