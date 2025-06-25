@@ -12,6 +12,7 @@ import {
 } from "recharts";
 import { useTransaction } from "../../hooks/useTransaction";
 import namaHari from "../../constant/namaHari";
+import TransaksiCard from "../../components/TransaksiCard";
 
 function ListTransaksi() {
   const { getAll } = useTransaction();
@@ -47,8 +48,8 @@ function ListTransaksi() {
     a.day.localeCompare(b.day)
   );
 
-  const width = window.innerWidth < 765 ? 300 : 900;
-  const height = window.innerHeight < 765 ? 200 : 500;
+  const width = window.innerWidth < 765 ? 300 : 650;
+  const height = window.innerHeight < 300 ? 400 : 400;
 
   return (
     <Dashboard>
@@ -66,7 +67,7 @@ function ListTransaksi() {
             </Link>
           </div>
           <div className="grid grid-cols-1 lg:flex gap-4 mt-4">
-            <div className="order-2 lg:order-1 w-full lg:w-1/3 max-h-[550px] overflow-y-scroll overflow-hidden">
+            <div className="order-2 lg:order-1 w-full lg:w-1/2 max-h-[550px] overflow-y-scroll overflow-hidden">
               {getAll.isPending ? (
                 <div className="text-white bg-black p-4 w-full text-center rounded-lg">
                   Loading...
@@ -80,64 +81,11 @@ function ListTransaksi() {
                   <span>Kategori belum ada... Silahkan tambah kategori</span>
                 </div>
               ) : (
-                getAll.data.data.map((transaksi) => (
-                  <Link
-                    key={transaksi.id}
-                    to={`/transaksi/edit/${transaksi.id}`}
-                    className="w-full"
-                  >
-                    <div className="text-black rounded-lg  cursor-pointer hover:scale-95 transition-all duration-300 mt-2 border-t-2 shadow-md">
-                      <div
-                        className={`w-full justify-between items-center font-bold bg-gradient-to-br text-black 
-                      } flex py-2 px-4 mb-4 rounded-lg rounded-b-none`}
-                      >
-                        <span>
-                          {transaksi.type === "income"
-                            ? "Pendapatan"
-                            : "Pengeluaran"}
-                        </span>
-                        <div
-                          className={`flex items-center gap-2 ${transaksi.category.color} p-2 rounded-full`}
-                        >
-                          <Icon
-                            icon={transaksi.category.icon}
-                            className="text-2xl text-white"
-                          />
-                        </div>
-                      </div>
-                      <div className="flex lg:flex-row justify-between items-center px-4 pb-2">
-                        <div className="flex items-center gap-2 justify-center">
-                          <Icon icon="mdi:calendar" className="text-4xl" />
-                          <div className="flex flex-col">
-                            <span className="font-bold">
-                              {
-                                namaHari[
-                                  new Date(transaksi.transaction_date).getDay()
-                                ]
-                              }
-                            </span>
-                            <span className="text-xs">
-                              {transaksi.transaction_date.substring(0, 10)}
-                            </span>
-                          </div>
-                        </div>
-                        <div className="flex justify-end items-center">
-                          <span
-                            className={`text-base font-bold ${
-                              transaksi.type === "income"
-                                ? "text-green-600"
-                                : "text-red-600"
-                            }`}
-                          >
-                            {transaksi.type === "income" ? "" : "-"}
-                            {transaksi.amount.toLocaleString()}{" "}
-                            {transaksi.wallet.currency}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                ))
+                <div className="flex flex-col gap-2">
+                  {getAll.data.data.map((transaksi) => (
+                    <TransaksiCard key={transaksi.id} transaksi={transaksi} />
+                  ))}
+                </div>
               )}
             </div>
             <div className="order-1 lg:order-2 shadow-md p-2 rounded-lg h-fit">
