@@ -8,7 +8,7 @@ I-Catat adalah aplikasi pencatatan keuangan berbasis web yang memudahkan penggun
 - **Transaksi**: Catat pemasukan dan pengeluaran dengan mudah.
 - **Kategori**: Kelola kategori transaksi sesuai kebutuhan.
 - **Grafik**: Visualisasi data keuangan dalam bentuk grafik dan diagram.
-- **Dompet**: Manajemen saldo dan dompet.
+- **Dompet**: Manajemen dompet dan anggaran.
 
 ## Tampilan Aplikasi
 
