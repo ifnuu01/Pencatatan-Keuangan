@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 import { useAuth } from "../hooks/useAuth";
 import Button from "./Button";
 import { useSidebar } from "../contexts/NavbarProvider";
-import user from "../utils/getUser";
+import getUser from "../utils/getUser";
 
 function Header() {
   const { sidebarOpen, setSidebarOpen } = useSidebar();
@@ -39,14 +39,16 @@ function Header() {
               <Icon icon="mdi:menu" className="text-2xl" />
             </button>
             <div className="flex items-center">
-              <div className="bg-black rounded-full h-10 w-10 flex items-center justify-center">
+              <div className="bg-black rounded-full h-10 w-10 flex items-center justify-center animate-bounce">
                 <Icon
                   icon="mingcute:pig-money-fill"
                   className="text-white text-2xl"
                 />
               </div>
               <div>
-                <span className="ml-2 text-md font-semibold">{user?.name}</span>
+                <span className="ml-2 text-md font-semibold">
+                  {getUser()?.name}
+                </span>
 
                 <div className="ml-2 text-xs text-black">
                   {new Date().toLocaleDateString("id-ID", {
