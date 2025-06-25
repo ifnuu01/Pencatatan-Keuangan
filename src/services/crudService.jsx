@@ -4,12 +4,18 @@ import getToken from "../utils/getToken";
 const API_BASE_URL = import.meta.env.VITE_API_KEY;
 
 export function crudService(resourcePath) {
+  console.log(getToken());
   const instance = axios.create({
     baseURL: `${API_BASE_URL}/${resourcePath}`,
     headers: {
       Accept: "application/json",
-      Authorization: `Bearer ${getToken()}`,
     },
+  });
+
+  instance.interceptors.request.use((config) => {
+    const token = getToken();
+    token && (config.headers.Authorization = `Bearer ${token}`);
+    return config;
   });
 
   return {
