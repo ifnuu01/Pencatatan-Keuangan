@@ -40,10 +40,4 @@ I-Catat adalah aplikasi pencatatan keuangan berbasis web yang memudahkan penggun
    ```
 5. Buka di browser pada `http://localhost:5173`
 
-## Kontribusi
-
-Kontribusi sangat terbuka! Silakan buat issue atau pull request untuk perbaikan dan penambahan fitur.
-
----
-
-&copy; 2025 I-Catat
+&copy; 2025 Ifnu Umar
