@@ -24,7 +24,7 @@ I-Catat adalah aplikasi pencatatan keuangan berbasis web yang memudahkan penggun
 
 1. Clone repository ini:
    ```bash
-   git clone https://github.com/username/fe-pencatatan-keuangan.git
+   git clone https://github.com/ifnuu01/Pencatatan-Keuangan.git
    ```
 2. Masuk ke folder project:
    ```bash
