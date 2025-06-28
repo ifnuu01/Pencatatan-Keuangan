@@ -1,18 +1,5 @@
 import { Icon } from "@iconify/react";
-
-const ICON_OPTIONS = [
-  "mdi:food",
-  "mdi:car",
-  "mdi:home",
-  "mdi:cart",
-  "mdi:wallet",
-  "mdi:cash",
-  "mdi:gift",
-  "mdi:heart",
-  "mdi:school",
-  "mdi:airplane",
-];
-
+import ICON_OPTIONS from "../constant/iconItems";
 const IconPicker = ({ value, onChange, error }) => (
   <div>
     <div className="mb-2 font-semibold mt-4">Pilih Icon</div>

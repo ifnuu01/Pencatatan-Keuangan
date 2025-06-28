@@ -68,13 +68,13 @@ function Registrasi() {
         </div>
         <div className="w-full">
           <InputField
-            label="Password"
+            label="Konfirmasi Password"
             icon="mdi:lock"
             name="password_confirmation"
             type="password"
             value={inputs.password_confirmation}
             onChange={handleChange}
-            placeholder="Masukkan password"
+            placeholder="Masukkan konfirmasi password"
             error={register.isError && register.errors?.password_confirmation}
           />
         </div>
