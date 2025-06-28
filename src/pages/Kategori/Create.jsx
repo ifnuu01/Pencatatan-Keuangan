@@ -24,6 +24,12 @@ function Create() {
   const handleSubmit = (e) => {
     e.preventDefault();
     create.mutate(inputs);
+    setInputs({
+      name: "",
+      type: "",
+      icon: "",
+      color: "",
+    });
   };
 
   return (

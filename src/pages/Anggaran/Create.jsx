@@ -27,6 +27,14 @@ function Create() {
   const handleSubmit = (e) => {
     e.preventDefault();
     create.mutate(inputs);
+    setInputs({
+      name: "",
+      amount: "",
+      period: "",
+      start_date: "",
+      end_date: "",
+      category_id: "",
+    });
   };
 
   return (

@@ -22,6 +22,13 @@ function Create() {
   const handleSubmit = (e) => {
     e.preventDefault();
     create.mutate(inputs);
+    setInputs({
+      wallet_id: "",
+      category_id: "",
+      type: "",
+      amount: "",
+      description: "",
+    });
   };
 
   return (

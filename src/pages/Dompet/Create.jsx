@@ -21,6 +21,10 @@ function Create() {
   const handleSubmit = (e) => {
     e.preventDefault();
     create.mutate(inputs);
+    setInputs({
+      name: "",
+      balance: "",
+    });
   };
 
   return (
