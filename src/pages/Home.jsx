@@ -16,19 +16,19 @@ export default function Home() {
           <CardSummary
             icon="mdi:cash-plus"
             label="Total Pemasukan"
-            value={getAll.data?.totalPemasukan || "loading..."}
+            value={getAll.data?.totalPemasukan || "0"}
             color="text-green-600"
           />
           <CardSummary
             icon="mdi:cash-minus"
             label="Total Pengeluaran"
-            value={getAll.data?.totalPengeluaran || "loading..."}
+            value={getAll.data?.totalPengeluaran || "0"}
             color="text-red-600"
           />
           <CardSummary
             icon="mdi:wallet"
             label="Saldo Akhir"
-            value={getAll.data?.saldo || "loading..."}
+            value={getAll.data?.saldo || "0"}
             color="text-blue-600"
           />
         </div>

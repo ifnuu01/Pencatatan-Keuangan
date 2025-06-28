@@ -16,6 +16,7 @@ import TransaksiCard from "../../components/TransaksiCard";
 
 function ListTransaksi() {
   const { getAll } = useTransaction();
+  console.log(getAll.data);
 
   const now = new Date();
   const currentMonth = now.getMonth();
@@ -76,9 +77,9 @@ function ListTransaksi() {
                 <div className="bg-red-600 p-4 text-white w-full rounded-lg text-center">
                   <span>{getAll.error.message}</span>
                 </div>
-              ) : getAll.data.length === 0 ? (
+              ) : getAll.data.data.length === 0 ? (
                 <div className="bg-red-600 p-4 text-white w-full rounded-lg text-center">
-                  <span>Kategori belum ada... Silahkan tambah kategori</span>
+                  <span>Transaksi belum ada... Silahkan tambah transaksi</span>
                 </div>
               ) : (
                 <div className="flex flex-col gap-2">
@@ -93,32 +94,34 @@ function ListTransaksi() {
               {getAll.isPending ? (
                 <div className="text-center p-4">Loading grafik...</div>
               ) : (
-                <LineChart width={width} height={height} data={chartData}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis
-                    dataKey="day"
-                    label={{
-                      value: "Tanggal",
-                      position: "insideBottomRight",
-                      offset: -5,
-                    }}
-                  />
-                  <YAxis />
-                  <Tooltip />
-                  <Legend />
-                  <Line
-                    type="monotone"
-                    dataKey="expense"
-                    stroke="#ff4d4f"
-                    name="Pengeluaran"
-                  />
-                  <Line
-                    type="monotone"
-                    dataKey="income"
-                    stroke="#52c41a"
-                    name="Pendapatan"
-                  />
-                </LineChart>
+                getAll.data.data.length > 0 && (
+                  <LineChart width={width} height={height} data={chartData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis
+                      dataKey="day"
+                      label={{
+                        value: "Tanggal",
+                        position: "insideBottomRight",
+                        offset: -5,
+                      }}
+                    />
+                    <YAxis />
+                    <Tooltip />
+                    <Legend />
+                    <Line
+                      type="monotone"
+                      dataKey="expense"
+                      stroke="#ff4d4f"
+                      name="Pengeluaran"
+                    />
+                    <Line
+                      type="monotone"
+                      dataKey="income"
+                      stroke="#52c41a"
+                      name="Pendapatan"
+                    />
+                  </LineChart>
+                )
               )}
             </div>
           </div>

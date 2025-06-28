@@ -32,6 +32,18 @@ function Registrasi() {
         <h1 className="text-7xl font-bold">REGIS</h1>
         <div className="w-full">
           <InputField
+            label="Nama"
+            icon="mdi:account"
+            name="name"
+            type="text"
+            value={inputs.name}
+            onChange={handleChange}
+            placeholder="Masukkan nama"
+            error={register.isError && register.errors?.name}
+          />
+        </div>
+        <div className="w-full">
+          <InputField
             label="Email"
             icon="mdi:email"
             name="email"
